@@ -5782,11 +5782,22 @@
                     <script type="text/javascript">
                       (() => {
                         if (!document.querySelector('.qr_checkin').hasChildNodes()) {
+                          let guestQrData = "Nama Tamu";
+                          const urlParams = new URLSearchParams(window.location.search);
+                          let toParam = urlParams.get('to');
+                          if (!toParam && window.location.hash) {
+                            const hash = window.location.hash.substring(1);
+                            const searchPart = hash.startsWith('?') ? hash : '?' + hash;
+                            toParam = new URLSearchParams(searchPart).get('to');
+                          }
+                          if (toParam) {
+                            guestQrData = toParam;
+                          }
                           const qr_checkin_179 = new QRCodeStyling({
                             width: 150,
                             height: 150,
                             type: "svg",
-                            data: "Nama Tamu",
+                            data: guestQrData,
                             image: "",
                             qrOptions: {
                               errorCorrectionLevel: "Q"
@@ -6138,6 +6149,36 @@
         wdpAudio && wdpAudio.pause();
       }
     })
+  </script>
+
+  <script>
+    jQuery(document).ready(function ($) {
+      function getGuestName() {
+        const urlParams = new URLSearchParams(window.location.search);
+        let toParam = urlParams.get('to');
+        if (toParam) return toParam;
+
+        if (window.location.hash) {
+          const hash = window.location.hash.substring(1);
+          const searchPart = hash.startsWith('?') ? hash : '?' + hash;
+          const hashParams = new URLSearchParams(searchPart);
+          toParam = hashParams.get('to');
+          if (toParam) return toParam;
+        }
+        return null;
+      }
+
+      const guestName = getGuestName();
+      if (guestName) {
+        console.log('Replacing guest name with:', guestName);
+        // Cover name
+        $('.namatamu .elementor-heading-title').text(guestName);
+        // Inner page invitation name
+        $('.elementor-element-e74060e .elementor-heading-title').text(guestName);
+        // RSVP Form Author fields
+        $('input[name="author"], #author, input[name="nama"]').val(guestName);
+      }
+    });
   </script>
   <style id="e-addons-template-dynamic-1b674ad5-inline">
     .elementor:is(.e-post-1152, .e-loop-item-1152) .elementor-element.elementor-element-1b674ad5:not(.elementor-motion-effects-element-type-background),
