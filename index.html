@@ -3274,6 +3274,7 @@
       color: #485349;
     }
   </style>
+  <link rel="shortcut icon" href="./kirimdigi.jpg" type="image/jpeg">
   <link rel="icon" href="./kirimdigi.jpg" sizes="32x32">
   <link rel="icon" href="./kirimdigi.jpg" sizes="192x192">
   <link rel="apple-touch-icon" href="./kirimdigi.jpg">
@@ -5340,6 +5341,16 @@
                   }
                   document.getElementById("tombol-buka").onclick = function () {
                     enableScroll();
+                    const song = document.getElementById("song");
+                    if (song) {
+                      if (song.readyState >= 1) {
+                        song.currentTime = 52;
+                      } else {
+                        song.addEventListener('loadedmetadata', function() {
+                          song.currentTime = 52;
+                        }, { once: true });
+                      }
+                    }
                     _playAudio();
                     jQuery("#cover").animate({ opacity: 0, top: "-100%" }, 1500);
                     showAllSect();
@@ -5503,6 +5514,16 @@
                   }
                   document.getElementById("tombol-buka").onclick = function () {
                     enableScroll();
+                    const song = document.getElementById("song");
+                    if (song) {
+                      if (song.readyState >= 1) {
+                        song.currentTime = 52;
+                      } else {
+                        song.addEventListener('loadedmetadata', function() {
+                          song.currentTime = 52;
+                        }, { once: true });
+                      }
+                    }
                     _playAudio();
                     jQuery("#cover").animate({ opacity: 0, top: "-100%" }, 1500);
                     showAllSect();
