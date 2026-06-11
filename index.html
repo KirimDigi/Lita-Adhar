@@ -7,6 +7,38 @@
     img:is([sizes="auto" i], [sizes^="auto," i]) {
       contain-intrinsic-size: 3000px 1500px
     }
+
+    /* Elegant background pattern for Akad & Resepsi containers */
+    .elementor-element-3d373f1,
+    .elementor-element-b7c6977 {
+      background-color: #faf6f0 !important;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23915e72' fill-opacity='0.06'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm1-61c3.16 0 6-2.84 6-6s-2.84-6-6-6-6 2.84-6 6 2.84 6 6 6zm-.5 17c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5 1.5.672 1.5 1.5 1.5zm-.5 10c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm27-14c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9 47c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zM80 0c0 4.418-3.582 8-8 8s-8-3.582-8-8h16zm-8 80c4.418 0 8-3.582 8-8H64c0 4.418 3.582 8 8 8zM0 72c0 4.418 3.582 8 8 8V64c-4.418 0-8 3.582-8 8zM0 0h16c0 4.418-3.582 8-8 8s-8-3.582-8-8zm0 80h16c0-4.418-3.582-8-8-8s-8 3.582-8 8zm80-80v16c-4.418 0-8-3.582-8-8s3.582-8 8-8zm0 80V64c-4.418 0-8 3.582-8 8s3.582 8 8 8zM41 17c.552 0 1-.448 1-1V1c0-.552-.448-1-1-1s-1 .448-1 1v15c0 .552.448 1 1 1zm0 34c.552 0 1-.448 1-1V35c0-.552-.448-1-1-1s-1 .448-1 1v15c0 .552.448 1 1 1zm0 24c.552 0 1-.448 1-1V59c0-.552-.448-1-1-1s-1 .448-1 1v15c0 .552.448 1 1 1zM25 34c0 .552-.448 1-1 1H9c-.552 0-1-.448-1-1s.448-1 1-1h15c.552 0 1 .448 1 1zm46 0c0 .552-.448 1-1 1H55c-.552 0-1-.448-1-1s.448-1 1-1h15c.552 0 1 .448 1 1zM25 58c0 .552-.448 1-1 1H9c-.552 0-1-.448-1-1s.448-1 1-1h15c.552 0 1 .448 1 1zm46 0c0 .552-.448 1-1 1H55c-.552 0-1-.448-1-1s.448-1 1-1h15c.552 0 1 .448 1 1zM49 19c.386 0 .7-.314.7-.7V4.7c0-.386-.314-.7-.7-.7s-.7.314-.7.7v13.6c0 .386.314.7.7.7zm0 34c.386 0 .7-.314.7-.7V38.7c0-.386-.314-.7-.7-.7s-.7.314-.7.7v13.6c0 .386.314.7.7.7zm0 24c.386 0 .7-.314.7-.7V58.7c0-.386-.314-.7-.7-.7s-.7.314-.7.7v13.6c0 .386.314.7.7.7zm-20 6c0 .386.314.7.7.7h13.6c.386 0 .7-.314.7-.7s-.314-.7-.7-.7H30.2c-.386 0-.7.314-.7.7zm0-24c0 .386.314.7.7.7h13.6c.386 0 .7-.314.7-.7s-.314-.7-.7-.7H30.2c-.386 0-.7.314-.7.7z'/%3E%3C/g%3E%3C/svg%3E") !important;
+      background-size: 80px 80px !important;
+      position: relative !important;
+    }
+
+    .elementor-element-3d373f1 .elementor-background-slideshow,
+    .elementor-element-b7c6977 .elementor-background-slideshow {
+      display: none !important;
+    }
+
+    /* Adjust background positions via parent href to prevent cropping heads (bulletproof wildcard version) */
+    a[href="./Foto/10.jpeg"] *,
+    a[href="./Foto/9.jpeg"] *,
+    a[href="./Foto/8.jpeg"] * {
+      background-position: center top !important;
+    }
+
+    /* Force portrait frame (aspect-ratio 2:3) for items 8, 9, 10 */
+    a[href="./Foto/10.jpeg"] .e-gallery-image,
+    a[href="./Foto/9.jpeg"] .e-gallery-image,
+    a[href="./Foto/8.jpeg"] .e-gallery-image {
+      padding-bottom: 150% !important;
+    }
+
+    a[href="./Foto/1.jpeg"] * {
+      background-position: center bottom !important;
+    }
   </style>
 
   <!-- Optimasi Mesin Pencari oleh Rank Math - https://rankmath.com/ -->
@@ -21,27 +53,24 @@
   <meta property="og:site_name" content="Digital Wedding Invitation">
   <meta property="article:section" content="Undangan Pernikahan">
   <meta property="og:updated_time" content="2025-06-10T13:00:31+07:00">
-  <meta property="og:image"
-    content="https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri8-kekondangan.webp">
-  <meta property="og:image:secure_url"
-    content="https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri8-kekondangan.webp">
-  <meta property="og:image:width" content="1152">
-  <meta property="og:image:height" content="768">
+  <meta property="og:image" content="Foto/FotoAwal.jpeg">
+  <meta property="og:image:secure_url" content="Foto/FotoAwal.jpeg">
+  <meta property="og:image:width" content="1080">
+  <meta property="og:image:height" content="1350">
   <meta property="og:image:alt" content="Litha &#038; Adhar">
-  <meta property="og:image:type" content="image/webp">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="article:published_time" content="2024-06-06T12:54:13+07:00">
   <meta property="article:modified_time" content="2025-06-10T13:00:31+07:00">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Wedding Of Litha &amp; Adhar">
   <meta name="twitter:description" content="Hadiri Acara Pernikahan Litha & Adhar. Senin, 15 Juni 2026 Ya!">
-  <meta name="twitter:image"
-    content="https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri8-kekondangan.webp">
+  <meta name="twitter:image" content="Foto/FotoAwal.jpeg">
   <meta name="twitter:label1" content="Ditulis oleh">
   <meta name="twitter:data1" content="kekondangan">
   <meta name="twitter:label2" content="Waktunya membaca">
   <meta name="twitter:data2" content="Kurang dari semenit">
   <script type="application/ld+json"
-    class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://invitimo.my.id/#person","name":"Digital Wedding Invitation"},{"@type":"WebSite","@id":"https://invitimo.my.id/#website","url":"https://invitimo.my.id","name":"Digital Wedding Invitation","publisher":{"@id":"https://invitimo.my.id/#person"},"inLanguage":"id"},{"@type":"ImageObject","@id":"https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri8-kekondangan.webp","url":"https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri8-kekondangan.webp","width":"1152","height":"768","inLanguage":"id"},{"@type":"WebPage","@id":"https://invitimo.my.id/deluxe-08/#webpage","url":"https://invitimo.my.id/deluxe-08/","name":"The Wedding Of Litha &amp; Adhar","datePublished":"2024-06-06T12:54:13+07:00","dateModified":"2025-06-10T13:00:31+07:00","isPartOf":{"@id":"https://invitimo.my.id/#website"},"primaryImageOfPage":{"@id":"https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri8-kekondangan.webp"},"inLanguage":"id"},{"@type":"Person","@id":"https://invitimo.my.id/author/kekondangan/","name":"kekondangan","url":"https://invitimo.my.id/author/kekondangan/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/d28f060878f04974fcd244a24bc69911?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/d28f060878f04974fcd244a24bc69911?s=96&amp;d=mm&amp;r=g","caption":"kekondangan","inLanguage":"id"},"sameAs":["http://hi.kekondangan.id"]},{"@type":"BlogPosting","headline":"The Wedding Of Litha &amp; Adhar","datePublished":"2024-06-06T12:54:13+07:00","dateModified":"2025-06-10T13:00:31+07:00","articleSection":"Undangan Pernikahan","author":{"@id":"https://invitimo.my.id/author/kekondangan/","name":"kekondangan"},"publisher":{"@id":"https://invitimo.my.id/#person"},"description":"Nama Tamu, hadiri acara pernikahan Litha &amp; Adhar. pada hari Minggu. 31 Desember 2024 Ya!","name":"The Wedding Of Litha &amp; Adhar","@id":"https://invitimo.my.id/deluxe-08/#richSnippet","isPartOf":{"@id":"https://invitimo.my.id/deluxe-08/#webpage"},"image":{"@id":"https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri8-kekondangan.webp"},"inLanguage":"id","mainEntityOfPage":{"@id":"https://invitimo.my.id/deluxe-08/#webpage"}}]}</script>
+    class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://invitimo.my.id/#person","name":"Digital Wedding Invitation"},{"@type":"WebSite","@id":"https://invitimo.my.id/#website","url":"https://invitimo.my.id","name":"Digital Wedding Invitation","publisher":{"@id":"https://invitimo.my.id/#person"},"inLanguage":"id"},{"@type":"ImageObject","@id":"Foto/FotoAwal.jpeg","url":"Foto/FotoAwal.jpeg","width":"1080","height":"1350","inLanguage":"id"},{"@type":"WebPage","@id":"https://invitimo.my.id/deluxe-08/#webpage","url":"https://invitimo.my.id/deluxe-08/","name":"The Wedding Of Litha &amp; Adhar","datePublished":"2024-06-06T12:54:13+07:00","dateModified":"2025-06-10T13:00:31+07:00","isPartOf":{"@id":"https://invitimo.my.id/#website"},"primaryImageOfPage":{"@id":"Foto/FotoAwal.jpeg"},"inLanguage":"id"},{"@type":"Person","@id":"https://invitimo.my.id/author/kekondangan/","name":"kekondangan","url":"https://invitimo.my.id/author/kekondangan/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/d28f060878f04974fcd244a24bc69911?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/d28f060878f04974fcd244a24bc69911?s=96&amp;d=mm&amp;r=g","caption":"kekondangan","inLanguage":"id"},"sameAs":["http://hi.kekondangan.id"]},{"@type":"BlogPosting","headline":"The Wedding Of Litha &amp; Adhar","datePublished":"2024-06-06T12:54:13+07:00","dateModified":"2025-06-10T13:00:31+07:00","articleSection":"Undangan Pernikahan","author":{"@id":"https://invitimo.my.id/author/kekondangan/","name":"kekondangan"},"publisher":{"@id":"https://invitimo.my.id/#person"},"description":"Nama Tamu, hadiri acara pernikahan Litha &amp; Adhar. pada hari Minggu. 31 Desember 2024 Ya!","name":"The Wedding Of Litha &amp; Adhar","@id":"https://invitimo.my.id/deluxe-08/#richSnippet","isPartOf":{"@id":"https://invitimo.my.id/deluxe-08/#webpage"},"image":{"@id":"Foto/FotoAwal.jpeg"},"inLanguage":"id","mainEntityOfPage":{"@id":"https://invitimo.my.id/deluxe-08/#webpage"}}]}</script>
   <!-- /Plugin WordPress Rank Math SEO -->
 
   <link rel='dns-prefetch' href='//hi.kekondangan.id'>
@@ -1404,12 +1433,12 @@
 
     .elementor-1127 .elementor-element.elementor-element-1b674ad5:not(.elementor-motion-effects-element-type-background),
     .elementor-1127 .elementor-element.elementor-element-1b674ad5>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-      background-image: url("./wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri8-kekondangan.webp");
+      background-image: url("./Foto/7.jpeg");
     }
 
     .elementor-1127 .elementor-element.elementor-element-6a151fcc:not(.elementor-motion-effects-element-type-background),
     .elementor-1127 .elementor-element.elementor-element-6a151fcc>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-      background-image: url("./wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri5-kekondangan.webp");
+      background-image: url("./Foto/FotoAwal.jpeg");
     }
 
     .elementor-1127 .elementor-element.elementor-element-52e5d2af .elementor-button {
@@ -3414,7 +3443,7 @@
         </div>
         <div class="elementor-element elementor-element-3bf8528c e-con-full e-flex e-con e-child" data-id="3bf8528c"
           data-element_type="container" data-e-type="container"
-          data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_slide_duration&quot;:2500,&quot;background_slideshow_transition_duration&quot;:2500,&quot;jet_parallax_layout_list&quot;:[],&quot;background_slideshow_slide_transition&quot;:&quot;slide_right&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:&quot;1424&quot;,&quot;url&quot;:&quot;https:\/\/hi.kekondangan.id\/wp-content\/uploads\/jet-form-builder\/cedebb6e872f539bef8c3f919874e9d7\/2024\/06\/Countdown3-kekondangan.webp&quot;},{&quot;id&quot;:&quot;1425&quot;,&quot;url&quot;:&quot;https:\/\/hi.kekondangan.id\/wp-content\/uploads\/jet-form-builder\/cedebb6e872f539bef8c3f919874e9d7\/2024\/06\/Countdown2-kekondangan.webp&quot;}],&quot;background_slideshow_loop&quot;:&quot;yes&quot;}">
+          data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_slide_duration&quot;:2500,&quot;background_slideshow_transition_duration&quot;:2500,&quot;jet_parallax_layout_list&quot;:[],&quot;background_slideshow_slide_transition&quot;:&quot;slide_right&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:&quot;1424&quot;,&quot;url&quot;:&quot;.\/Foto\/FotoSimpan%20Kalender.jpeg&quot;},{&quot;id&quot;:&quot;1425&quot;,&quot;url&quot;:&quot;.\/Foto\/FotoSimpan%20Kalender1.jpeg&quot;}],&quot;background_slideshow_loop&quot;:&quot;yes&quot;}">
           <div class="elementor-element elementor-element-761b68a3 elementor-widget elementor-widget-spacer"
             data-id="761b68a3" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
             <div class="elementor-widget-container">
@@ -3536,7 +3565,7 @@
             </div>
             <div class="elementor-element elementor-element-4dd60fbb e-con-full e-flex e-con e-child" data-id="4dd60fbb"
               data-element_type="container" data-e-type="container"
-              data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_slide_duration&quot;:2500,&quot;background_slideshow_slide_transition&quot;:&quot;slide_right&quot;,&quot;background_slideshow_transition_duration&quot;:2500,&quot;jet_parallax_layout_list&quot;:[],&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:&quot;1418&quot;,&quot;url&quot;:&quot;https:\/\/hi.kekondangan.id\/wp-content\/uploads\/jet-form-builder\/cedebb6e872f539bef8c3f919874e9d7\/2024\/06\/Cpw3-kekondangan.webp&quot;},{&quot;id&quot;:&quot;1420&quot;,&quot;url&quot;:&quot;https:\/\/hi.kekondangan.id\/wp-content\/uploads\/jet-form-builder\/cedebb6e872f539bef8c3f919874e9d7\/2024\/06\/Cpw1-kekondangan.webp&quot;}],&quot;background_slideshow_loop&quot;:&quot;yes&quot;}">
+              data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_slide_duration&quot;:2500,&quot;background_slideshow_slide_transition&quot;:&quot;slide_right&quot;,&quot;background_slideshow_transition_duration&quot;:2500,&quot;jet_parallax_layout_list&quot;:[],&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:&quot;1418&quot;,&quot;url&quot;:&quot;.\/Foto\/FotoCatin1.jpeg&quot;},{&quot;id&quot;:&quot;1420&quot;,&quot;url&quot;:&quot;.\/Foto\/FotoCatin2.jpeg&quot;}],&quot;background_slideshow_loop&quot;:&quot;yes&quot;}">
               <div class="elementor-element elementor-element-7e950665 elementor-widget elementor-widget-spacer"
                 data-id="7e950665" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
                 <div class="elementor-widget-container">
@@ -3616,7 +3645,7 @@
             data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
             <div class="elementor-element elementor-element-a3943d7 e-con-full e-flex e-con e-child" data-id="a3943d7"
               data-element_type="container" data-e-type="container"
-              data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_slide_duration&quot;:2500,&quot;background_slideshow_slide_transition&quot;:&quot;slide_right&quot;,&quot;background_slideshow_transition_duration&quot;:2500,&quot;jet_parallax_layout_list&quot;:[],&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:&quot;1421&quot;,&quot;url&quot;:&quot;https:\/\/hi.kekondangan.id\/wp-content\/uploads\/jet-form-builder\/cedebb6e872f539bef8c3f919874e9d7\/2024\/06\/Cpp3-kekondangan.webp&quot;},{&quot;id&quot;:&quot;1422&quot;,&quot;url&quot;:&quot;https:\/\/hi.kekondangan.id\/wp-content\/uploads\/jet-form-builder\/cedebb6e872f539bef8c3f919874e9d7\/2024\/06\/Cpp2-kekondangan.webp&quot;}],&quot;background_slideshow_loop&quot;:&quot;yes&quot;}">
+              data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_slide_duration&quot;:2500,&quot;background_slideshow_slide_transition&quot;:&quot;slide_right&quot;,&quot;background_slideshow_transition_duration&quot;:2500,&quot;jet_parallax_layout_list&quot;:[],&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:&quot;1421&quot;,&quot;url&quot;:&quot;.\/Foto\/FotoCatin3.jpeg&quot;},{&quot;id&quot;:&quot;1422&quot;,&quot;url&quot;:&quot;.\/Foto\/FotoCatin4.jpeg&quot;}],&quot;background_slideshow_loop&quot;:&quot;yes&quot;}">
               <div class="elementor-element elementor-element-54a33faa elementor-widget elementor-widget-spacer"
                 data-id="54a33faa" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
                 <div class="elementor-widget-container">
@@ -4014,21 +4043,7 @@
           </div>
         </div>
 
-        <div
-          class="elementor-element elementor-element-ecb430f e-con-full jedv-enabled--yes non-clickable e-flex e-con e-child"
-          data-id="ecb430f" data-element_type="container" data-e-type="container"
-          data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-          <div class="elementor-element elementor-element-e624f48 elementor-widget elementor-widget-video"
-            data-id="e624f48" data-element_type="widget" data-e-type="widget"
-            data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/www.youtube.com\/watch?v=QMForPSc-Mc&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;}"
-            data-widget_type="video.default">
-            <div class="elementor-widget-container">
-              <div class="elementor-wrapper elementor-open-inline">
-                <div class="elementor-video"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div class="elementor-element elementor-element-6e778fd e-con-full jedv-enabled--yes e-flex e-con e-child"
           data-id="6e778fd" data-element_type="container" data-e-type="container"
           data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
@@ -4070,104 +4085,77 @@
             data-widget_type="gallery.default">
             <div class="elementor-widget-container">
               <div class="elementor-gallery__container">
-                <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                  href="./wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri-10-kekondangan.webp"
+                <!-- Landscapes -->
+                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="./Foto/7.jpeg"
                   data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="3358cd8"
-                  data-elementor-lightbox-title="Galeri-10-kekondangan"
-                  data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTQzMywidXJsIjoiaHR0cHM6XC9cL2hpLmtla29uZGFuZ2FuLmlkXC93cC1jb250ZW50XC91cGxvYWRzXC9qZXQtZm9ybS1idWlsZGVyXC80YzViZGU3NGE4ZjExMDY1Njg3NDkwMmYwNzM3ODAwOVwvMjAyNFwvMDZcL0dhbGVyaS0xMC1rZWtvbmRhbmdhbi53ZWJwIiwic2xpZGVzaG93IjoiMzM1OGNkOCJ9">
-                  <div class="e-gallery-image elementor-gallery-item__image"
-                    data-thumbnail="https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri-10-kekondangan.webp"
+                  data-elementor-lightbox-title="Galeri7">
+                  <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="./Foto/7.jpeg"
+                    data-width="1080" data-height="720" aria-label="" role="img"></div>
+                  <div class="elementor-gallery-item__overlay"></div>
+                </a>
+                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="./Foto/6.jpeg"
+                  data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="3358cd8"
+                  data-elementor-lightbox-title="Galeri6">
+                  <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="./Foto/6.jpeg"
+                    data-width="1080" data-height="720" aria-label="" role="img"></div>
+                  <div class="elementor-gallery-item__overlay"></div>
+                </a>
+                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="./Foto/4.jpeg"
+                  data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="3358cd8"
+                  data-elementor-lightbox-title="Galeri4">
+                  <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="./Foto/4.jpeg"
+                    data-width="1080" data-height="720" aria-label="" role="img"></div>
+                  <div class="elementor-gallery-item__overlay"></div>
+                </a>
+                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="./Foto/3.jpeg"
+                  data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="3358cd8"
+                  data-elementor-lightbox-title="Galeri3">
+                  <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="./Foto/3.jpeg"
+                    data-width="1080" data-height="720" aria-label="" role="img"></div>
+                  <div class="elementor-gallery-item__overlay"></div>
+                </a>
+
+                <!-- Portraits -->
+                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="./Foto/10.jpeg"
+                  data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="3358cd8"
+                  data-elementor-lightbox-title="Galeri10">
+                  <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="./Foto/10.jpeg"
                     data-width="720" data-height="1080" aria-label="" role="img"></div>
                   <div class="elementor-gallery-item__overlay"></div>
                 </a>
-                <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                  href="./wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri9-kekondangan.webp"
+                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="./Foto/9.jpeg"
                   data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="3358cd8"
-                  data-elementor-lightbox-title="Galeri9-kekondangan"
-                  data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTQzNCwidXJsIjoiaHR0cHM6XC9cL2hpLmtla29uZGFuZ2FuLmlkXC93cC1jb250ZW50XC91cGxvYWRzXC9qZXQtZm9ybS1idWlsZGVyXC80YzViZGU3NGE4ZjExMDY1Njg3NDkwMmYwNzM3ODAwOVwvMjAyNFwvMDZcL0dhbGVyaTkta2Vrb25kYW5nYW4ud2VicCIsInNsaWRlc2hvdyI6IjMzNThjZDgifQ%3D%3D">
-                  <div class="e-gallery-image elementor-gallery-item__image"
-                    data-thumbnail="https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri9-kekondangan.webp"
-                    data-width="1152" data-height="768" aria-label="" role="img"></div>
-                  <div class="elementor-gallery-item__overlay"></div>
-                </a>
-                <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                  href="./wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri8-kekondangan.webp"
-                  data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="3358cd8"
-                  data-elementor-lightbox-title="Galeri8-kekondangan"
-                  data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTQzNSwidXJsIjoiaHR0cHM6XC9cL2hpLmtla29uZGFuZ2FuLmlkXC93cC1jb250ZW50XC91cGxvYWRzXC9qZXQtZm9ybS1idWlsZGVyXC80YzViZGU3NGE4ZjExMDY1Njg3NDkwMmYwNzM3ODAwOVwvMjAyNFwvMDZcL0dhbGVyaTgta2Vrb25kYW5nYW4ud2VicCIsInNsaWRlc2hvdyI6IjMzNThjZDgifQ%3D%3D">
-                  <div class="e-gallery-image elementor-gallery-item__image"
-                    data-thumbnail="https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri8-kekondangan.webp"
-                    data-width="1152" data-height="768" aria-label="" role="img"></div>
-                  <div class="elementor-gallery-item__overlay"></div>
-                </a>
-                <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                  href="./wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri7-kekondangan.webp"
-                  data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="3358cd8"
-                  data-elementor-lightbox-title="Galeri7-kekondangan"
-                  data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTQzNiwidXJsIjoiaHR0cHM6XC9cL2hpLmtla29uZGFuZ2FuLmlkXC93cC1jb250ZW50XC91cGxvYWRzXC9qZXQtZm9ybS1idWlsZGVyXC80YzViZGU3NGE4ZjExMDY1Njg3NDkwMmYwNzM3ODAwOVwvMjAyNFwvMDZcL0dhbGVyaTcta2Vrb25kYW5nYW4ud2VicCIsInNsaWRlc2hvdyI6IjMzNThjZDgifQ%3D%3D">
-                  <div class="e-gallery-image elementor-gallery-item__image"
-                    data-thumbnail="https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri7-kekondangan.webp"
-                    data-width="1152" data-height="768" aria-label="" role="img"></div>
-                  <div class="elementor-gallery-item__overlay"></div>
-                </a>
-                <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                  href="./wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri6-kekondangan.webp"
-                  data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="3358cd8"
-                  data-elementor-lightbox-title="Galeri6-kekondangan"
-                  data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTQzNywidXJsIjoiaHR0cHM6XC9cL2hpLmtla29uZGFuZ2FuLmlkXC93cC1jb250ZW50XC91cGxvYWRzXC9qZXQtZm9ybS1idWlsZGVyXC80YzViZGU3NGE4ZjExMDY1Njg3NDkwMmYwNzM3ODAwOVwvMjAyNFwvMDZcL0dhbGVyaTYta2Vrb25kYW5nYW4ud2VicCIsInNsaWRlc2hvdyI6IjMzNThjZDgifQ%3D%3D">
-                  <div class="e-gallery-image elementor-gallery-item__image"
-                    data-thumbnail="https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri6-kekondangan.webp"
-                    data-width="1152" data-height="768" aria-label="" role="img"></div>
-                  <div class="elementor-gallery-item__overlay"></div>
-                </a>
-                <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                  href="./wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri5-kekondangan.webp"
-                  data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="3358cd8"
-                  data-elementor-lightbox-title="Galeri5-kekondangan"
-                  data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTQzOCwidXJsIjoiaHR0cHM6XC9cL2hpLmtla29uZGFuZ2FuLmlkXC93cC1jb250ZW50XC91cGxvYWRzXC9qZXQtZm9ybS1idWlsZGVyXC80YzViZGU3NGE4ZjExMDY1Njg3NDkwMmYwNzM3ODAwOVwvMjAyNFwvMDZcL0dhbGVyaTUta2Vrb25kYW5nYW4ud2VicCIsInNsaWRlc2hvdyI6IjMzNThjZDgifQ%3D%3D">
-                  <div class="e-gallery-image elementor-gallery-item__image"
-                    data-thumbnail="https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri5-kekondangan.webp"
+                  data-elementor-lightbox-title="Galeri9">
+                  <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="./Foto/9.jpeg"
                     data-width="720" data-height="1080" aria-label="" role="img"></div>
                   <div class="elementor-gallery-item__overlay"></div>
                 </a>
-                <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                  href="./wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri4-kekondangan.webp"
+                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="./Foto/8.jpeg"
                   data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="3358cd8"
-                  data-elementor-lightbox-title="Galeri4-kekondangan"
-                  data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTQzOSwidXJsIjoiaHR0cHM6XC9cL2hpLmtla29uZGFuZ2FuLmlkXC93cC1jb250ZW50XC91cGxvYWRzXC9qZXQtZm9ybS1idWlsZGVyXC80YzViZGU3NGE4ZjExMDY1Njg3NDkwMmYwNzM3ODAwOVwvMjAyNFwvMDZcL0dhbGVyaTQta2Vrb25kYW5nYW4ud2VicCIsInNsaWRlc2hvdyI6IjMzNThjZDgifQ%3D%3D">
-                  <div class="e-gallery-image elementor-gallery-item__image"
-                    data-thumbnail="https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri4-kekondangan.webp"
+                  data-elementor-lightbox-title="Galeri8">
+                  <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="./Foto/8.jpeg"
                     data-width="720" data-height="1080" aria-label="" role="img"></div>
                   <div class="elementor-gallery-item__overlay"></div>
                 </a>
-                <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                  href="./wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri3-kekondangan.webp"
+                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="./Foto/5.jpeg"
                   data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="3358cd8"
-                  data-elementor-lightbox-title="Galeri3-kekondangan"
-                  data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTQ0MCwidXJsIjoiaHR0cHM6XC9cL2hpLmtla29uZGFuZ2FuLmlkXC93cC1jb250ZW50XC91cGxvYWRzXC9qZXQtZm9ybS1idWlsZGVyXC80YzViZGU3NGE4ZjExMDY1Njg3NDkwMmYwNzM3ODAwOVwvMjAyNFwvMDZcL0dhbGVyaTMta2Vrb25kYW5nYW4ud2VicCIsInNsaWRlc2hvdyI6IjMzNThjZDgifQ%3D%3D">
-                  <div class="e-gallery-image elementor-gallery-item__image"
-                    data-thumbnail="https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri3-kekondangan.webp"
-                    data-width="1152" data-height="768" aria-label="" role="img"></div>
-                  <div class="elementor-gallery-item__overlay"></div>
-                </a>
-                <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                  href="./wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri2-kekondangan.webp"
-                  data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="3358cd8"
-                  data-elementor-lightbox-title="Galeri2-kekondangan"
-                  data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTQ0MSwidXJsIjoiaHR0cHM6XC9cL2hpLmtla29uZGFuZ2FuLmlkXC93cC1jb250ZW50XC91cGxvYWRzXC9qZXQtZm9ybS1idWlsZGVyXC80YzViZGU3NGE4ZjExMDY1Njg3NDkwMmYwNzM3ODAwOVwvMjAyNFwvMDZcL0dhbGVyaTIta2Vrb25kYW5nYW4ud2VicCIsInNsaWRlc2hvdyI6IjMzNThjZDgifQ%3D%3D">
-                  <div class="e-gallery-image elementor-gallery-item__image"
-                    data-thumbnail="https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri2-kekondangan.webp"
+                  data-elementor-lightbox-title="Galeri5">
+                  <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="./Foto/5.jpeg"
                     data-width="720" data-height="1080" aria-label="" role="img"></div>
                   <div class="elementor-gallery-item__overlay"></div>
                 </a>
-                <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                  href="./wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri1-kekondangan.webp"
+                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="./Foto/2.jpeg"
                   data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="3358cd8"
-                  data-elementor-lightbox-title="Galeri1-kekondangan"
-                  data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTQ0MiwidXJsIjoiaHR0cHM6XC9cL2hpLmtla29uZGFuZ2FuLmlkXC93cC1jb250ZW50XC91cGxvYWRzXC9qZXQtZm9ybS1idWlsZGVyXC80YzViZGU3NGE4ZjExMDY1Njg3NDkwMmYwNzM3ODAwOVwvMjAyNFwvMDZcL0dhbGVyaTEta2Vrb25kYW5nYW4ud2VicCIsInNsaWRlc2hvdyI6IjMzNThjZDgifQ%3D%3D">
-                  <div class="e-gallery-image elementor-gallery-item__image"
-                    data-thumbnail="https://hi.kekondangan.id/wp-content/uploads/jet-form-builder/4c5bde74a8f110656874902f07378009/2024/06/Galeri1-kekondangan.webp"
-                    data-width="1152" data-height="768" aria-label="" role="img"></div>
+                  data-elementor-lightbox-title="Galeri2">
+                  <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="./Foto/2.jpeg"
+                    data-width="720" data-height="1080" aria-label="" role="img"></div>
+                  <div class="elementor-gallery-item__overlay"></div>
+                </a>
+                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="./Foto/1.jpeg"
+                  data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="3358cd8"
+                  data-elementor-lightbox-title="Galeri1">
+                  <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="./Foto/1.jpeg"
+                    data-width="720" data-height="1080" aria-label="" role="img"></div>
                   <div class="elementor-gallery-item__overlay"></div>
                 </a>
               </div>
@@ -4323,7 +4311,7 @@
                                           data-id="274f287" data-element_type="widget" data-e-type="widget"
                                           data-widget_type="heading.default">
                                           <div class="elementor-widget-container">
-                                            <p class="elementor-heading-title elementor-size-default">An. Nurlita
+                                            <p class="elementor-heading-title elementor-size-default">Nurlita
                                               Febriana</p>
                                           </div>
                                         </div>
@@ -4552,7 +4540,7 @@
                                       style="display: block; font-family: 'Nunito', Sans-serif; font-size: 13px; font-weight: 700; color: #423D3D; margin-bottom: 2px;">Nama
                                       Penerima</span>
                                     <span
-                                      style="display: block; font-family: 'Nunito', Sans-serif; font-size: 14px; color: #5a5757; font-weight: 600;">Lita-Adhar</span>
+                                      style="display: block; font-family: 'Nunito', Sans-serif; font-size: 14px; color: #5a5757; font-weight: 600;">Litha-Adhar</span>
                                   </div>
                                   <div style="margin-bottom: 15px;">
                                     <span
@@ -5172,7 +5160,7 @@
               data-settings="{&quot;_position&quot;:&quot;fixed&quot;}" data-widget_type="wds_audio.default">
               <div class="elementor-widget-container">
                 <script type="text/javascript">
-                  var WdsAudio = { "source": "url", "audio_link": "./Rizky%20Febian%20Feat.%20Mahalini%20-%20Bermuara%20%5BOfficial%20Lyric%20Video%5D.mp3", "audio_start": "", "audio_end": "", "autoplay": false }
+                  var WdsAudio = { "source": "url", "audio_link": "./The%20way%20you%20look%20at%20me%20-%20Christian%20Bautista%20Lyrics.mp3", "audio_start": "", "audio_end": "", "autoplay": false }
                 </script>
 
 
@@ -5222,7 +5210,7 @@
 
 
                   <audio id="song" loop>
-                    <source src="./Rizky Febian Feat. Mahalini - Bermuara [Official Lyric Video].mp3" type="audio/mp3">
+                    <source src="./The way you look at me - Christian Bautista Lyrics.mp3" type="audio/mp3">
                   </audio>
 
 
@@ -5583,7 +5571,7 @@
 
     .elementor-642 .elementor-element.elementor-element-164270d:not(.elementor-motion-effects-element-type-background),
     .elementor-642 .elementor-element.elementor-element-164270d>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-      background-image: url("./wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri8-kekondangan.webp");
+      background-image: url("./Foto/7.jpeg");
     }
 
     .elementor-642 .elementor-element.elementor-element-4963fc2.elementor-view-stacked .elementor-icon {
@@ -6054,7 +6042,7 @@
       "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Bagikan di Facebook", "shareOnTwitter": "Bagikan di Twitter", "pinIt": "Buat Pin", "download": "Unduh", "downloadImage": "Unduh gambar", "fullscreen": "Layar Penuh", "zoom": "Perbesar", "share": "Bagikan", "playVideo": "Putar Video", "previous": "Sebelumnya", "next": "Selanjutnya", "close": "Tutup", "a11yCarouselPrevSlideMessage": "Slide sebelumnya", "a11yCarouselNextSlideMessage": "Slide selanjutnya", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": {
         "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Layar lebar", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } },
         "hasCustomBreakpoints": false
-      }, "version": "4.0.8", "is_static": false, "experimentalFeatures": { "additional_custom_breakpoints": true, "container": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "nested-elements": true, "global_classes_should_enforce_capabilities": true, "e_variables": true, "e_opt_in_v4_page": true, "e_components": true, "e_interactions": true, "e_widget_creation": true, "import-export-customization": true, "e_pro_atomic_form": true, "e_pro_variables": true, "e_pro_interactions": true }, "urls": { "assets": "https:\/\/hi.kekondangan.id\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/invitimo.my.id\/wp-admin\/admin-ajax.php", "uploadUrl": "https:\/\/hi.kekondangan.id\/wp-content\/uploads" }, "nonces": { "floatingButtonsClickTracking": "bb9457f389", "atomicFormsSendForm": "0a9d8ff9a2" }, "swiperClass": "swiper", "settings": { "page": { "ha_cmc_init_switcher": "no" }, "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_footer_logo_type": "logo", "ha_rpb_enable": "no" }, "post": { "id": 1152, "title": "The%20Wedding%20Of%20Litha%20%26%20Adhar", "excerpt": "", "featuredImage": "https:\/\/hi.kekondangan.id\/wp-content\/uploads\/jet-form-builder\/cedebb6e872f539bef8c3f919874e9d7\/2024\/06\/Galeri8-kekondangan.webp" }
+      }, "version": "4.0.8", "is_static": false, "experimentalFeatures": { "additional_custom_breakpoints": true, "container": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "nested-elements": true, "global_classes_should_enforce_capabilities": true, "e_variables": true, "e_opt_in_v4_page": true, "e_components": true, "e_interactions": true, "e_widget_creation": true, "import-export-customization": true, "e_pro_atomic_form": true, "e_pro_variables": true, "e_pro_interactions": true }, "urls": { "assets": "https:\/\/hi.kekondangan.id\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/invitimo.my.id\/wp-admin\/admin-ajax.php", "uploadUrl": "https:\/\/hi.kekondangan.id\/wp-content\/uploads" }, "nonces": { "floatingButtonsClickTracking": "bb9457f389", "atomicFormsSendForm": "0a9d8ff9a2" }, "swiperClass": "swiper", "settings": { "page": { "ha_cmc_init_switcher": "no" }, "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_footer_logo_type": "logo", "ha_rpb_enable": "no" }, "post": { "id": 1152, "title": "The%20Wedding%20Of%20Litha%20%26%20Adhar", "excerpt": "", "featuredImage": "Foto/FotoAwal.jpeg" }
     };
   </script>
   <script src="./wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.0.8" id="elementor-frontend-js"></script>
@@ -6154,8 +6142,8 @@
   <style id="e-addons-template-dynamic-1b674ad5-inline">
     .elementor:is(.e-post-1152, .e-loop-item-1152) .elementor-element.elementor-element-1b674ad5:not(.elementor-motion-effects-element-type-background),
     .elementor:is(.e-post-1152, .e-loop-item-1152) .elementor-element.elementor-element-1b674ad5>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-      background-image: url("./wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri8-kekondangan.webp");
-      --e-bg-lazyload: url("./wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri8-kekondangan.webp");
+      background-image: url("./Foto/7.jpeg");
+      --e-bg-lazyload: url("./Foto/7.jpeg");
       background-position: center center;
       background-size: cover;
     }
@@ -6163,8 +6151,8 @@
   <style id="e-addons-template-dynamic-6a151fcc-inline">
     .elementor:is(.e-post-1152, .e-loop-item-1152) .elementor-element.elementor-element-6a151fcc:not(.elementor-motion-effects-element-type-background),
     .elementor:is(.e-post-1152, .e-loop-item-1152) .elementor-element.elementor-element-6a151fcc>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-      background-image: url("./wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri5-kekondangan.webp");
-      --e-bg-lazyload: url("./wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri5-kekondangan.webp");
+      background-image: url("./Foto/FotoAwal.jpeg");
+      --e-bg-lazyload: url("./Foto/FotoAwal.jpeg");
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -6227,8 +6215,8 @@
   <style id="e-addons-template-dynamic-164270d-inline">
     .elementor:is(.e-post-1152, .e-loop-item-1152) .elementor-element.elementor-element-164270d:not(.elementor-motion-effects-element-type-background),
     .elementor:is(.e-post-1152, .e-loop-item-1152) .elementor-element.elementor-element-164270d>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-      background-image: url("./wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri8-kekondangan.webp");
-      --e-bg-lazyload: url("./wp-content/uploads/jet-form-builder/cedebb6e872f539bef8c3f919874e9d7/2024/06/Galeri8-kekondangan.webp");
+      background-image: url("./Foto/7.jpeg");
+      --e-bg-lazyload: url("./Foto/7.jpeg");
       background-position: center center;
       background-size: cover;
     }
